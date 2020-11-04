@@ -1,3 +1,16 @@
+# Smart T-Rex: Project Explanation
+
+Smart T-Rex is a machine-learning-based algorithm that enables autonomous playing of the T-Rex game. The solution is based on the k-nearest neighbors classifier. The first part of the solution is creating the data set. Data set is created from a human play. To improve the training process the unwanted data which presents the death of the T-Rex is not used in the creation of the data set. The created data set is caring information from human actions like distance before jump and features of the faced obstacles. The play is evaluated and rewarded every second while the one is playing by adding one point to the Score sum.\
+The created raw data set needs further processing. The first step is to be split into test data and train data. Then the data is reformed into data frames that are a perfect fit for the classifier. In this part of processing, the default value is set for the height of the Dino as zero. In other words, the default Dino pose is calibrated at zero height. After processing both data sets it is time for training.
+
+The default values for the hyperparameters of the classifiers are used because of the simplicity of the task. The trained model, after every training, is saved as a new model for further use and evaluation. While testing the model in real-time data is collected from the game and passed to the classifier. Then the output of the classifier is applied to the computer machine as a corresponding action. If the output is positive, then the computer performs the jump command (hopefully the obstacle is avoided).
+
+In the testing process, gathered data contain features and actions which are then packed into the test data set which is used for graphic visualization, so we will be able to compare the human action versus algorithm action.
+
+The process of data collection is enabled by functions that locate a small predefined part of the screen (where the Dino and obstacles are appearing) and detect the objects of interest. After the objects are allocated the next step is measuring the height of the obstacle and distance between the Dino and the obstacle. The game window must be visible for the user all the time so it will be for the algorithm too. While data is gathered for training and testing the frames per second parameter must be synchronized. This is very important because if these two parameters are not synchronized the actions may be delayed or taken before. After the death of the Dino if the user starts to play again the new data is concatenated to the old one to expand the training data set. The k-nearest neighbors classifier requires just a few rounds of the game to be played so it can imitate a human playing.
+
+** **This work is done with the possibility to be expanded in the generative model which will be able to expand the knowledge base and improve the score in every play on its own.**
+
 # Functions that are used in this work will be explained here:
 ## AUXILARY FUNCTIONS:
 ---
