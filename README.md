@@ -11,6 +11,8 @@ The process of data collection is enabled by functions that locate a small prede
 
 ** **This work is done with the possibility to be expanded in the generative model which will be able to expand the knowledge base and improve the score in every play on its own.**
 
+▸ This work is done as a project for faculty subject "Machine learning". November 2018.
+
 # Functions that are used in this work will be explained here:
 ## AUXILARY FUNCTIONS:
 ---
